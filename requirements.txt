@@ -1,0 +1,28 @@
+# Data manipulation 
+pandas==2.2.2
+numpy==1.26.4
+
+# Dashboard
+streamlit==1.45.1
+
+
+# Visualization 
+plotly==5.22.0
+
+# Database
+psycopg2-binary==2.9.9
+SQLAlchemy==2.0.29
+
+# Environment variables
+python-dotenv==1.0.1
+
+# Financial data
+yfinance==0.2.40
+alpha_vantage==2.3.1
+
+# Machine learning
+scikit-learn==1.5.0
+prophet==1.1.4
+
+# Validation 
+pydantic==2.7.1

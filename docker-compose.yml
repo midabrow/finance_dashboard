@@ -1,0 +1,41 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: finance_dashboard_app
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./app:/app/app # cały lokalny projekt (.) trafia do katalogu /app w kontenerze.
+    environment:
+      - PYTHONPATH=/app/app
+    env_file:
+      - .env
+    depends_on:
+      - db
+    network_mode: bridge
+      
+  db:
+    image: postgres:15
+    container_name: finance_dashboard_db
+    restart: always
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    volumes:
+      - db_data:/var/lib/postgresql/data
+      - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - "5432:5432"
+  
+  adminer:
+    image: adminer
+    container_name: finance_dashboard_adminer
+    restart: always
+    ports:
+      - "8080:8080"
+    
+volumes:
+  db_data:

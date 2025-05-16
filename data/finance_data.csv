@@ -1,0 +1,56 @@
+Date,Description,Category,Type,Amount,Payment Method,Status
+01-01-2025,Salary,Salary,Income,7200.0,Bank Transfer,Completed
+03-01-2025,Biedronka,Groceries,Expense,235.4,Card,Completed
+05-01-2025,Netflix,Entertainment,Expense,55.0,Bank Transfer,Completed
+06-01-2025,Shell Station,Transport,Expense,280.5,Card,Completed
+08-01-2025,Gift for sister,Gifts,Expense,200.0,Cash,Completed
+10-01-2025,Tax refund,Other,Income,1350.0,Bank Transfer,Completed
+11-01-2025,Multikino,Entertainment,Expense,45.0,Card,Completed
+13-01-2025,Lidl,Groceries,Expense,198.75,Card,Completed
+15-01-2025,Allegro,Online Shopping,Expense,149.99,Card,Completed
+18-01-2025,Dentist,Healthcare,Expense,320.0,Cash,Completed
+20-01-2025,Media Markt,Electronics,Expense,699.0,Card,Completed
+22-01-2025,Electricity Bill,Utilities,Expense,390.0,Bank Transfer,Pending
+25-01-2025,Bonus,Salary,Income,1500.0,Bank Transfer,Completed
+27-01-2025,Biedronka,Groceries,Expense,255.2,Card,Completed
+28-01-2025,Uber,Transport,Expense,45.0,Card,Completed
+30-01-2025,Spotify,Entertainment,Expense,19.99,Bank Transfer,Completed
+31-01-2025,Zalando return,Other,Income,250.0,Bank Transfer,Completed
+02/02/2025,,Groceries,Expense,187.6,Card,Completed
+04-02-2025,Zalando,Online Shopping,Expense,,Card,Completed
+06-02-2025,Pizza Hut,entertainment,Expense,78.0,Cassh,Completed
+07-02-2025,Shell,Transport,Expense,302.5,Card,Completed
+08-02-2025,Gas Bill,Utilities,Expense,415.0,Bank Transfer,Pending
+10-02-2025,Salary,Salary,Income,7400.0,Bank Transfer,Completed
+12-02-2025,Biedonka,Groceries,Expense,222.0,Card,Completed
+14-02-2025,Valentine's Gift,Gifts,Expense,310.0,Cash,Completed
+17-02-2025,Dentist,Healthcare,Expense,280.0,cash,Completed
+20-02-2025,Netflix,Entertainment,Expense,55.0,,Completed
+24-02-2025,Online course,Education,Expense,450.0,Bank Transfer,Completed
+26-02-2025,Lidl,Groceries,Expense,198.75,Card,Completed
+01-03-2025,Tax refund,Other,Income,1250.0,Bank Transfer,Completed
+05-03-2025,Booking.com,Travel,Expense,1500.0,Bank Transfer,Pending
+07-03-2025,Dog supplies,Pets,Expense,320.0,Card,Completed
+08-03-2025,Shell,Transport,Expense,280.0,Card,Completed
+10-03-2025,Spotify,Entertainment,Expense,19.99,Bank Transfer,Completed
+12-03-2025,Biedronka,Grocerries,Expense,210.0,Card,Completed
+14-03-2025,Multikino,Entertainment,Expense,45.0,Card,Completed
+16-03-2025,Media Markt,Electronics,Expense,880.0,Card,Completed
+18-03-2025,Internet Bill,Utilities,Expense,120.0,Bank Transfer,Completed
+20-03-2025,Salary,Salary,Income,7300.0,Bank Transfer,Completed
+22-03-2025,Gift for brother,Gifts,Expense,200.0,Caasg,Completed
+24-03-2025,Lidl,Groceries,Expense,198.0,Card,Completed
+26-03-2025,Shell Station,Transport,Expense,260.0,Card,Completed
+28-03-2025,Books,Education,Expense,180.0,Bank Transfer,Completed
+30-03-2025,Apple Music,Entertainment,Expense,19.99,Bank Transfer,Completed
+01-04-2025,Phone Bill,Utilities,Expense,90.0,Bank Transfer,Completed
+04-04-2025,Salary,Salary,Income,7400.0,Bank Transfer,Completed
+07-04-2025,Biedronka,Groceries,Expense,235.0,Card,Completed
+09-04-2025,Uber,Transport,Expense,50.0,Card,Completed
+11-04-2025,Netflix,Enntertainment,Expense,55.0,Bank Transfer,Completed
+13-04-2025,Gas Bill,Utilities,Expense,,Bank Transfer,Pending
+15-04-2025,Doctor,Healthcare,Expense,320.0,Cash,Completed
+17-04-2025,Booking.com,Travel,Expense,2200.0,Bank Transfer,Pending
+20-04-2025,Spotify,Entertainment,Expense,19.99,Bank Transfer,Completed
+22-04-2025,Lidl,Groceries,Expense,250.0,Card,Completed
+25-04-2025,Salary,Salary,Income,7500.0,Bank Transfer,Completed
