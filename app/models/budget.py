@@ -2,7 +2,8 @@
 
 from sqlalchemy import Column, Integer, String, Numeric, Date, Text, TIMESTAMP
 from components.database import Base
-from datetime import datetime
+from datetime import datetime, timezone
+
 
 class Expense(Base):
     """
@@ -19,7 +20,7 @@ class Expense(Base):
     amount = Column(Numeric(12, 2), nullable=False)
     payment_method = Column(String(50))
     status = Column(String(20), default="Completed")
-    created_at = Column(TIMESTAMP, default=datetime.utcnow)
+    created_at = Column(TIMESTAMP, default=lambda: datetime.now(timezone.utc))
 
     def __repr__(self):
         return f"<Expense(id={self.id}, description={self.description}, amount={self.amount})>"

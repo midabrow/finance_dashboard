@@ -16,6 +16,7 @@ POSTGRES_PORT = os.getenv("POSTGRES_PORT", "5432")
 
 # postgresql://my_user:super_secret@localhost:5432/my_database
 DATABASE_URL = f"postgresql://{POSTGRES_USER}:{POSTGRES_PASSWORD}@{POSTGRES_HOST}:{POSTGRES_PORT}/{POSTGRES_DB}"
+print("Using DB HOST:", POSTGRES_HOST)
 
 # Create database engine
 engine = create_engine(DATABASE_URL, echo=False)

@@ -16,8 +16,6 @@ def expense_form() -> Optional[dict]:
         dict or None: Data entered in the form or None if the form was not submitted.
     """
 
-    st.subheader("Add a New Expense or Income")
-
     with st.form("expense_form", clear_on_submit=True):
         date = st.date_input("Transaction Date", value=datetime.today())
         description = st.text_input("Description")
