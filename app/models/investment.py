@@ -18,9 +18,11 @@ class Investment(Base):
     ticker_symbol = Column(String(10), nullable=False, index=True)
     shares = Column(Integer, nullable=False)
     purchase_price_usd = Column(Numeric(12, 2), nullable=False)
-    account_type = Column(String(20), default="Standard")  # Zwykłe / IKE / IKZE
+    sold_date = Column(Date, nullable=True)
+    sell_price_usd = Column(Numeric(12, 2), nullable=True)
+    account_type = Column(String(20), default="Standard") 
     currency = Column(String(5), default="USD")
-    status = Column(String(20), default="Active")  # Aktywne / Sprzedane
+    status = Column(String(20), default="Active")
     created_at = Column(TIMESTAMP, default=lambda: datetime.now(timezone.utc))
 
     def __repr__(self):

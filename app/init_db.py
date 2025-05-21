@@ -6,6 +6,6 @@ from components.database import Base, engine
 from models.investment import Investment
 from models.budget import Expense
 
-# Utworzenie wszystkich tabel
-Base.metadata.create_all(bind=engine)
+Base.metadata.drop_all(bind=engine)   # ❗ usunie wszystkie tabele
+Base.metadata.create_all(bind=engine) # utworzy je na nowo z nowymi polami
 print("✅ Tabele zostały utworzone w lokalnej bazie danych.")
