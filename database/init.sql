@@ -1,3 +1,4 @@
+-- Create table: Expenses
 CREATE TABLE IF NOT EXISTS expenses (
     id SERIAL PRIMARY KEY,
     date DATE NOT NULL, 
@@ -10,7 +11,7 @@ CREATE TABLE IF NOT EXISTS expenses (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-
+-- Create table: Investments
 CREATE TABLE IF NOT EXISTS investments (
     id SERIAL PRIMARY KEY,
     purchase_date DATE NOT NULL,
@@ -25,6 +26,8 @@ CREATE TABLE IF NOT EXISTS investments (
 
 );
 
-
+-- Index for filtering/sorting expenses by date
 CREATE INDEX IF NOT EXISTS idx_expenses_date ON expenses(date);
+
+-- Index for filtering/sorting investments by ticker
 CREATE INDEX IF NOT EXISTS idx_investments_ticker ON investments(ticker_symbol);

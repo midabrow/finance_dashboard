@@ -1,6 +1,6 @@
 # app/services/investment_actions.py
 
-from models.investment import Investment
+from app.models.investment import Investment
 from sqlalchemy.orm import Session
 from datetime import datetime
 from typing import List
@@ -90,6 +90,7 @@ def sell_stocks(db: Session, company_name: str, shares_to_sell: int) -> Optional
         raise ValueError("Cannot fetch current market price.")
 
     market_price = price_data["Close"].iloc[-1]
+    current_price = market_price
     remaining = shares_to_sell
 
     for inv in active_investments:

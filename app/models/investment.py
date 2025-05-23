@@ -1,12 +1,12 @@
 # app/models/investment.py
 
 from sqlalchemy import Column, Integer, String, Numeric, Date, Text, TIMESTAMP
-from components.database import Base
+from app.components.database import Base
 from datetime import datetime, timezone
 
 class Investment(Base):
     """
-    Model ORM reprezentujący pojedynczą inwestycję w akcje.
+    ORM model representing a single stock investment.
     """
 
     __tablename__ = "investments"

@@ -1,6 +1,72 @@
 # .gitignore
+
+########################################
+# Python                               
+########################################
 **/__pycache__/
+*.py[cod]
+*.egg
+*.egg-info/
+*.pyo
+*.pyd
+*.pkl
+*.log
 *.pyc
+
+########################################
+# Virtual Environment & Dependency Caches
+########################################
+env/
+venv/
 .env
+.env.*
+*.sqlite3
+pip-wheel-metadata/
+*.db
+
+########################################
+# Pytest / Coverage
+########################################
+.pytest_cache/
+.coverage
+htmlcov/
+.cache/
+
+########################################
+# Streamlit
+########################################
+.streamlit/config.toml
+.streamlit/secrets.toml
+
+########################################
+# Docker
+########################################
+*.tar
+docker-compose.override.yml
+
+########################################
+# Project-specific artifacts
+########################################
+*.csv
+*.parquet
+*.xlsx
+*.ipynb_checkpoints
+logs/
+output/
+artifacts/
+
+########################################
+# IDE/Editor specific
+########################################
+.vscode/
+.idea/
+*.swp
+*.bak
+.DS_Store
+Thumbs.db
+
+########################################
+# Others/Temporary
+########################################
 README.ipynb
 README.md

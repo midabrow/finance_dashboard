@@ -11,6 +11,30 @@ import plotly.express as px
 import numpy as np
 import streamlit as st
 
+
+def get_key_metrics(ticker: str) -> dict:
+    t = yf.Ticker(ticker)
+    info = t.info
+
+    return {
+        "Current Price": info.get("currentPrice"),
+        "Previous Close": info.get("previousClose"),
+        "Market Cap": info.get("marketCap"),
+        "P/E (TTM)": info.get("trailingPE"),
+        "Forward P/E": info.get("forwardPE"),
+        "EPS (TTM)": info.get("trailingEps"),
+        "Dividend Yield": info.get("dividendYield"),
+        "ROE": info.get("returnOnEquity"),
+        "ROA": info.get("returnOnAssets"),
+        "Debt to Equity": info.get("debtToEquity"),
+        "Price to Book": info.get("priceToBook")
+    }
+
+def format_statement(df):
+    df = df.T
+    df.index = df.index.strftime('%Y-%m-%d')
+    return df.iloc[::-1]
+
 def plot_price_chart_candles(ticker:str, period: str ="6mo") -> go.Figure:
     df = yf.download(ticker, period=period)
 
@@ -62,30 +86,6 @@ def plot_moving_averages(ticker: str, period: str = "6mo") -> go.Figure:
 
     return fig
 
-def get_key_metrics(ticker: str) -> dict:
-    t = yf.Ticker(ticker)
-    info = t.info
-
-    return {
-        "Current Price": info.get("currentPrice"),
-        "Previous Close": info.get("previousClose"),
-        "Market Cap": info.get("marketCap"),
-        "P/E (TTM)": info.get("trailingPE"),
-        "Forward P/E": info.get("forwardPE"),
-        "EPS (TTM)": info.get("trailingEps"),
-        "Dividend Yield": info.get("dividendYield"),
-        "ROE": info.get("returnOnEquity"),
-        "ROA": info.get("returnOnAssets"),
-        "Debt to Equity": info.get("debtToEquity"),
-        "Price to Book": info.get("priceToBook")
-    }
-
-def format_statement(df):
-    df = df.T
-    df.index = df.index.strftime('%Y-%m-%d')
-    return df.iloc[::-1]
-
-
 def plot_income(data):
     try:
         # Resetuj indeks i zamień datę na kolumnę
@@ -127,6 +127,6 @@ def evaluate_company(metrics):
         messages.append("✅ High Return on Equity (ROE > 15%)")
 
     if metrics["Debt to Equity"] and metrics["Debt to Equity"] < 1:
-        messages.append("✅ Reasonable debt level (D/E < 1)")
+        messages.append("✅ Reasonable Debt level (D/E < 1)")
 
     return messages

@@ -1,13 +1,12 @@
 # app/models/budget.py
 
 from sqlalchemy import Column, Integer, String, Numeric, Date, Text, TIMESTAMP
-from components.database import Base
+from app.components.database import Base
 from datetime import datetime, timezone
-
 
 class Expense(Base):
     """
-    Model ORM reprezentujący wpis budżetowy (przychód lub wydatek).
+    ORM model representing a budget entry (income or expense).
     """
 
     __tablename__ = "expenses"
