@@ -32,7 +32,7 @@ def get_wallet(db: Session) -> pd.DataFrame:
     Returns current portfolio summary from the database.
 
     Args:
-        db (Session): SQLAlchemy session
+        db (Session): SQL session
 
     Returns:
         pd.DataFrame: Grouped wallet with Shares and Investment Value
@@ -69,7 +69,7 @@ def sell_stocks(db: Session, company_name: str, shares_to_sell: int) -> Optional
     Processes sale of stock for a specific company by FIFO logic.
 
     Args:
-        db (Session): SQLAlchemy session.
+        db (Session): SQL session.
         company_name (str): Name of the company whose shares are to be sold.
         shares_to_sell (int): Number of shares to sell.
 

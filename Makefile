@@ -1,5 +1,4 @@
-# Makefile — uruchamiaj, buduj, restartuj bez pisania docker-compose za każdym razem
-
+# Makefile
 up:
 	docker compose up
 

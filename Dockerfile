@@ -1,7 +1,7 @@
-# Startujemy od lekkiego obrazu Pythona
+
 FROM python:3.10-slim
 
-# Ustawiamy zmienną środowiskową, żeby Streamlit nie pytał o konfig
+# Zmienne środowiskowe
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
@@ -14,20 +14,20 @@ RUN apt-get update && apt-get install -y \
     curl \
     && rm -rf /var/lib/apt/lists/*
 
-# Tworzymy katalog roboczy
+# Katalog roboczy
 WORKDIR /app
 
-# Kopiujemy pliki wymagane do instalacji zależności
+# Kopiowanie plików wymaganych do instalacji zależności
 COPY requirements.txt .
 
-# Instalujemy zależności
+# Instalacja zależności
 RUN pip install --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Kopiujemy całą aplikację do kontenera
+# Kopiowanie aplikacji do kontenera
 COPY . .
 
-# Otwieramy port dla Streamlit
+# Otwarcie portu dla Streamlit
 EXPOSE 8501
 
 # Komenda startowa

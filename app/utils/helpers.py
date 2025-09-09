@@ -1,12 +1,4 @@
 import pandas as pd
-# import numpy as np
-# import yfinance as yf
-
-# import matplotlib.pyplot as plt
-# import plotly.graph_objects as go
-# import plotly.express as px
-# from sklearn.preprocessing import MinMaxScaler 
-# from keras.models import load_model # type: ignore
 
 def get_sp500_tickers():
     """

@@ -26,8 +26,8 @@ CREATE TABLE IF NOT EXISTS investments (
 
 );
 
--- Index for filtering/sorting expenses by date
+-- Index for filtering expenses by date
 CREATE INDEX IF NOT EXISTS idx_expenses_date ON expenses(date);
 
--- Index for filtering/sorting investments by ticker
+-- Index for filtering investments by ticker
 CREATE INDEX IF NOT EXISTS idx_investments_ticker ON investments(ticker_symbol);

@@ -53,7 +53,7 @@ def show_sidebar(db: Session) -> None:
     Renders sidebar with options to add or sell stocks.
 
     Args:
-        db (Session): SQLAlchemy session.
+        db (Session): SQL session.
     """
     
     mode = st.radio("Choose action", ["➕ Add Stocks", "📤 Sell Stocks"], horizontal=True)

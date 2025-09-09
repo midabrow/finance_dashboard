@@ -7,7 +7,7 @@ services:
     ports:
       - "8501:8501"
     volumes:
-      - ./app:/app/app # cały lokalny projekt (.) trafia do katalogu /app w kontenerze.
+      - ./app:/app/app 
     environment:
       - PYTHONPATH=/app/app
     env_file:

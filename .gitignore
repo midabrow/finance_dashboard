@@ -28,7 +28,6 @@ pip-wheel-metadata/
 # Pytest / Coverage
 ########################################
 .pytest_cache/
-.coverage
 htmlcov/
 .cache/
 

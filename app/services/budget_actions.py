@@ -10,7 +10,7 @@ def save_expense(db: Session, form_data: Dict) -> None:
     Adds a single expense or income record to the database.
 
     Args:
-        db (Session): SQLAlchemy session
+        db (Session): SQL session
         form_data (dict): Data from expense_form()
     """
     expense = Expense(
@@ -32,7 +32,7 @@ def save_expense_dataframe(db: Session, df: pd.DataFrame) -> None:
     Saves all rows from a cleaned DataFrame to the database.
 
     Args:
-        db (Session): SQLAlchemy session
+        db (Session): SQL session
         df (pd.DataFrame): Cleaned expense data
     """
     for _, row in df.iterrows():
